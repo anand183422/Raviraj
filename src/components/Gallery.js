@@ -45,7 +45,6 @@ export default function Gallery() {
   const [photoIndex, setPhotoIndex] = useState(0);
 
   const openLightbox = (index) => {
-
     setPhotoIndex(index);
     setOpen(true);
   };
@@ -108,18 +107,30 @@ export default function Gallery() {
       {/* Lightbox Modal */}
       <Lightbox
         open={open}
-        close={() => setOpen(false)}
+        close={() => setOpen(false)} // Close function is correctly passed
         index={photoIndex}
         slides={galleryImages.map((img) => ({
           src: img.src,
           alt: img.alt,
         }))}
-        render={{ 
-          buttonClose: ({ close }) => (
-            <button onClick={close} style={{ position: 'absolute', top: 10, right: 10, background: 'transparent', border: 'none', fontSize: '2rem', color: 'white', cursor: 'pointer' }}>
+        render={{
+          buttonClose: () => (
+            <button
+              onClick={() => setOpen(false)} // Directly use the setOpen function to close
+              style={{
+                position: 'absolute',
+                top: 10,
+                right: 10,
+                background: 'transparent',
+                border: 'none',
+                fontSize: '2rem',
+                color: 'white',
+                cursor: 'pointer',
+              }}
+            >
               ×
             </button>
-          )
+          ),
         }}
         styles={{
           container: { backgroundColor: 'rgba(0,0,0,0.8)' },
