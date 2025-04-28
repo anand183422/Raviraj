@@ -44,7 +44,8 @@ export default function Gallery() {
   const [open, setOpen] = useState(false);
   const [photoIndex, setPhotoIndex] = useState(0);
 
-  const openLightbox = (index: number) => {
+  const openLightbox = (index) => {
+
     setPhotoIndex(index);
     setOpen(true);
   };
