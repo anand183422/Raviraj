@@ -696,7 +696,7 @@ flexibility(document.documentElement);
                         <div className="elementor-button-wrapper">
                           <a
                             className="elementor-button elementor-button-link elementor-size-sm"
-                            href="about-us/index.html"
+                            href="/About-us/About"
                           >
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-icon">
@@ -796,7 +796,7 @@ flexibility(document.documentElement);
                         <div className="elementor-button-wrapper">
                           <a
                             className="elementor-button elementor-button-link elementor-size-sm"
-                            href="workshop/index.html"
+                            href="/workshop/indexx"
                           >
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-icon">
@@ -895,7 +895,7 @@ flexibility(document.documentElement);
                         <div className="elementor-button-wrapper">
                           <a
                             className="elementor-button elementor-button-link elementor-size-sm"
-                            href="contact-us/index.html"
+                            href="/cont/Contact"
                           >
                             <span className="elementor-button-content-wrapper">
                               <span className="elementor-button-icon">
