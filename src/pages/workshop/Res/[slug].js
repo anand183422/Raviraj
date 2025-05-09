@@ -150,6 +150,12 @@ flexibility(document.documentElement);
       '\n\t\t\t.elementor-54 .elementor-element.elementor-element-b2311f7 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:before, .elementor-54 .elementor-element.elementor-element-b2311f7 .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:after {\n    width: 60px;\n    position: absolute;\n    left: 20px;\n    top: 28px;\n    height: 1px;\n}\nli.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-294::after {\n    content: "";\n    position: absolute;\n    background: red;\n    width: 10px;\n    height: 10px;\n    border-radius: 50%;\n    top: 4px;\n    border: none;\n    left: 82px;\n\t-webkit-animation: 2s blink ease infinite;\n  -moz-animation: 2s blink ease infinite;\n  -ms-animation: 2s blink ease infinite;\n  -o-animation: 2s blink ease infinite;\n  animation: 2s blink ease infinite;\n}\n@keyframes "blink" {\n  from, to {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n@-moz-keyframes blink {\n  from, to {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n@-webkit-keyframes "blink" {\n  from, to {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n@-ms-keyframes "blink" {\n  from, to {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n@-o-keyframes "blink" {\n  from, to {\n    opacity: 0;\n  }\n  50% {\n    opacity: 1;\n  }\n}\n\n@media(max-width:425px){\n\tli.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-294::after {\n    content: "";\n\t\tdisplay:none;\n}\n\t.forminator-ui#forminator-module-324.forminator-design--default .forminator-label {\n    font-size: 12px;\n    font-family: inherit;\n    font-weight: 700;\n    font-family: \'Jost\' !important;\n    font-size: 18px !important;\n    font-weight: 400 !important;\n}\n\t\t'
   }}
 />
+<div
+      itemScope
+      itemType="https://schema.org/WebPage"
+      className="home page-template-default page page-id-16 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.9.0 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-19 elementor-page elementor-page-16"
+    >
+
   <a
     className="skip-link screen-reader-text"
     href="#content"
@@ -157,7 +163,7 @@ flexibility(document.documentElement);
   >
     Skip to content
   </a>
-  <div className="hfeed site" id="page">
+  <div className="hfeed site" style={{ height: "100vh" }} id="page">
    <Header />
     <div id="content" className="site-content">
       <div className="ast-container">
@@ -1266,6 +1272,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 			});`}
 		</Script> */}
   {/* Page cached by LiteSpeed Cache 6.5.4 on 2025-04-22 07:03:00 */}
+  </div>
 </>
 
     );
@@ -1274,7 +1281,7 @@ export async function getServerSideProps(context) {
   const slug = decodeURIComponent(context.params.slug);
 
   try {
-    const res = await axios.get("http://127.0.0.1:8000/api/seminar");
+    const res = await axios.get("https://ravirajsabalepatil.com/ravirajapi/public/api/seminar");
     const seminar = res.data.Seminar.find((b) => b.title === slug) || null;
 
     return { props: { seminar } };

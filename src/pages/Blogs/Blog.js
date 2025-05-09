@@ -16,7 +16,7 @@ const Blog=()=>
   
     const fetchdata = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/api/blog");
+        const res = await axios.get("https://ravirajsabalepatil.com/ravirajapi/public/api/blog");
         setBlogs(res.data.blog); // ✅ if your Laravel key is 'blog'
         
       } catch (error) {
@@ -131,14 +131,19 @@ flexibility(document.documentElement);
   }}
 />
 
-	
+<div
+      itemScope
+      itemType="https://schema.org/WebPage"
+      className="home page-template-default page page-id-16 wp-custom-logo ast-desktop ast-page-builder-template ast-no-sidebar astra-4.9.0 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-19 elementor-page elementor-page-16"
+    >
+
 
 <a
 	className="skip-link screen-reader-text"
 	href="#content"
 	title="Skip to content">
 		Skip to content</a>
-  <div className="hfeed site" id="page">
+  <div className="hfeed site" style={{ height: "100vh" }} id="page">
    <Header />
     <div id="content" className="site-content">
       <div className="ast-container">
@@ -419,6 +424,7 @@ wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
 				}
 			});`}
 		</Script> */}
+    /</div>
      </>
 
     );
